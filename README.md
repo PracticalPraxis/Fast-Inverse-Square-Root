@@ -3,8 +3,6 @@ Experiments with the Fast Inverse Square Root C code (https://en.wikipedia.org/w
 
 The original C code is as follows, including all original comments: 
 
-{;
-
 	float Q_rsqrt( float number )
 	long i;
 	float x2, y;
@@ -16,10 +14,9 @@ The original C code is as follows, including all original comments:
 	i  = 0x5f3759df - ( i >> 1 );               // what the fuck? 
 	y  = * ( float * ) &i;
 	y  = y * ( threehalfs - ( x2 * y * y ) );   // 1st iteration
-	y  = y * ( threehalfs - ( x2 * y * y ) );   // 2nd iteration, this can be removed
+	// y  = y * ( threehalfs - ( x2 * y * y ) );   // 2nd iteration, this can be removed
 
 	return y;
-}
 
 I find this a really cool bit of CS history (that lighting in ID games!) so I'm tinkering around with it here as a good mental exercise.
 

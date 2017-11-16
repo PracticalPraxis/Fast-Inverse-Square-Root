@@ -3,9 +3,9 @@ Experiments with the Fast Inverse Square Root C code (https://en.wikipedia.org/w
 
 The original C code is as follows, including all original comments: 
 
-{
+{;
 
-float Q_rsqrt( float number )
+	float Q_rsqrt( float number )
 	long i;
 	float x2, y;
 	const float threehalfs = 1.5F;
